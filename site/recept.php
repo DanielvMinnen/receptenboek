@@ -27,7 +27,9 @@ $recepten = mysqli_fetch_all($result, MYSQLI_ASSOC);
     <?Php include 'nav.php'; ?>
 
     <div class="div2">
-        
+        <?php foreach ($recepten as $recept) : ?>
+
+        <?php endforeach ?>
     </div>
 
     <?php include 'footer.php'; ?>
