@@ -7,7 +7,7 @@ $sql = "SELECT * FROM japan";
 //hier wordt de query uitgevoerd met de database
 $result = mysqli_query($conn, $sql);
 
-$recepten = mysqli_fetch_all($result, MYSQLI_ASSOC);
+$recept = mysqli_fetch_all($result, MYSQLI_ASSOC);
 ?>
 
 <!DOCTYPE html>
@@ -26,10 +26,11 @@ $recepten = mysqli_fetch_all($result, MYSQLI_ASSOC);
 <body>
     <?Php include 'nav.php'; ?>
 
-    <div class="div2">
-        <?php foreach ($recepten as $recept) : ?>
-
-        <?php endforeach ?>
+    <div class="foto1">
+        <img src=" <?php echo $recept["foto"] ?>">
+    </div>
+    <div class="naam">
+        <h3><?php echo $recept["naam_gerecht"] ?></h3>
     </div>
 
     <?php include 'footer.php'; ?>

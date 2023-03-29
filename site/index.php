@@ -7,13 +7,6 @@ $sql = "SELECT * From japan";
 //hier wordt de query uitgevoerd met de database
 $result = mysqli_query($conn, $sql);
 
-/**
- * Hier wordt het resultaat ($result) omgezet
- * in een *multidimensionale associatieve array
- * in dit voorbeeld staat $all_users maar dit mag
- * voor bijvoorbeeld producten $all_products heten.
- * Maar dit kies je zelf
- */
 $recepten = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
 ?>
@@ -44,13 +37,13 @@ $recepten = mysqli_fetch_all($result, MYSQLI_ASSOC);
                 <div class="foto">
                     <img src=" <?php echo $recept["foto"] ?>">
                     <div class="naam">
-                        <h3><?php echo $recept["naam gerecht"] ?></h3>
+                        <h3><?php echo $recept["naam_gerecht"] ?></h3>
                     </div>
                 </div>
             </a>
         <?php endforeach; ?>
     </main>
-    
+
     <?php include 'footer.php'; ?>
 </body>
 
