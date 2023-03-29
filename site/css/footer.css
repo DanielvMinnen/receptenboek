@@ -1,11 +1,34 @@
 footer {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
     background: red;
-    height: 2.5rem;
+    height: 60px;
     width: 100%;
-    padding-top: 20px;
-    color: white;   
+    color: white;
+    display: flex; 
+    flex-direction: row;  
+}
+
+.flex-container1{
+    display: flex;
+    margin: 0px;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: stretch;
+    flex-wrap: wrap;
+    text-align: center;
+    padding: 10px;
+}
+
+.footer{
+    display: flex;
+    height: 80px;
+    flex-direction:row ;
+    justify-content: space-evenly;
+}
+
+ul{
+    align-items: center;
 }

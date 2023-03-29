@@ -50,6 +50,7 @@ $recepten = mysqli_fetch_all($result, MYSQLI_ASSOC);
             </a>
         <?php endforeach; ?>
     </main>
+    
     <?php include 'footer.php'; ?>
 </body>
 
