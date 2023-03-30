@@ -43,7 +43,7 @@ $recept = mysqli_fetch_assoc($result);
         <p><?php echo $recept["aantal_personen"] ?></p>
         <h3>smaak</h3>
         <p><?php echo $recept["smaak"] ?></p>
-        
+
     </div>
 
     <?php include 'footer.php'; ?>
