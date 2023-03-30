@@ -26,6 +26,8 @@ $recepten = mysqli_fetch_all($result, MYSQLI_ASSOC);
 <body>
     <?Php include 'nav.php'; ?>
 
+    <div class="div1"></div>
+
     <?php include 'footer.php'; ?>
 
 </body>

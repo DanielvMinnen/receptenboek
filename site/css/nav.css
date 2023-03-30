@@ -15,9 +15,9 @@ li{
 ul {
     list-style-type: none;
     display: flex;
-    align-items: center;
     background-color:red;
     overflow: hidden;
+    justify-content: space-evenly;
   }
   
   li a {
@@ -33,7 +33,7 @@ ul {
   }
 
   h1{
-   padding-left: 21%;
+   
   }
 
   body{

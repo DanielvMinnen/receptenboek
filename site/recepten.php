@@ -39,7 +39,7 @@ $recepten = mysqli_fetch_all($result, MYSQLI_ASSOC);
                     <div class="naam">
                         <h3><?php echo $recept["naam_gerecht"] ?></h3>
                     </div>
-        </div>
+                </div>
             </a>
         <?php endforeach; ?>
     </main>
