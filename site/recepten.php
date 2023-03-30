@@ -27,9 +27,23 @@ $recepten = mysqli_fetch_all($result, MYSQLI_ASSOC);
 <body>
     <?Php include 'nav.php'; ?>
 
-    <div class="div1"></div>
+    <div class="div1">
 
-    
+    </div>
+
+    <main class="flex-container">
+        <?php foreach ($recepten as $recept) : ?>
+            <a href="recept.php?id=<?php echo $recept['ID'] ?>">
+                <div class="foto">
+                    <img src=" <?php echo $recept["foto"] ?>">
+                    <div class="naam">
+                        <h3><?php echo $recept["naam_gerecht"] ?></h3>
+                    </div>
+                </div>
+            </a>
+        <?php endforeach; ?>
+    </main>
+
     <?php include 'footer.php'; ?>
 </body>
 

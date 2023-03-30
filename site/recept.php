@@ -1,13 +1,15 @@
 <?php
 require 'database.php';
 
+$ID = $_GET["id"];
+
 //de sql query
-$sql = "SELECT * FROM japan";
+$sql = "SELECT * FROM japan where ID = $ID";
 
 //hier wordt de query uitgevoerd met de database
 $result = mysqli_query($conn, $sql);
 
-$recepten = mysqli_fetch_all($result, MYSQLI_ASSOC);
+$recept = mysqli_fetch_assoc($result);
 ?>
 
 <!DOCTYPE html>
@@ -28,9 +30,20 @@ $recepten = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
     <div class="foto1">
         <img src=" <?php echo $recept["foto"] ?>">
-    </div>  
+    </div>
     <div class="naam">
-        <h3><?php echo $recept["naam_gerecht"] ?></h3>
+        <h2><?php echo $recept["naam_gerecht"] ?></h2>
+        <h3>Ingrediënten</h3>
+        <p><?php echo $recept["ingredienten"] ?></p>
+        <h3>beschrijving</h3>
+        <p><?php echo $recept["beschrijving"] ?></p>
+        <h3>bereidindstijd</h3>
+        <p><?php echo $recept["bereidingstijd"] ?></p>
+        <h3>aantal personen</h3>
+        <p><?php echo $recept["aantal_personen"] ?></p>
+        <h3>smaak</h3>
+        <p><?php echo $recept["smaak"] ?></p>
+        
     </div>
 
     <?php include 'footer.php'; ?>
