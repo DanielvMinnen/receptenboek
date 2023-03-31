@@ -37,7 +37,7 @@ $recepten = mysqli_fetch_all($result, MYSQLI_ASSOC);
                 <div class="foto">
                     <img src=" <?php echo $recept["foto"] ?>">
                     <div class="naam">
-                        <h3><?php echo $recept["naam_gerecht"] ?></h3>
+                        <h3><?php echo $recept["titel"] ?></h3>
                     </div>
                 </div>
             </a>

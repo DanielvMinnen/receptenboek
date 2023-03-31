@@ -32,18 +32,21 @@ $recept = mysqli_fetch_assoc($result);
         <img src=" <?php echo $recept["foto"] ?>">
     </div>
     <div class="naam">
-        <h2><?php echo $recept["naam_gerecht"] ?></h2>
+        <h2><?php echo $recept["titel"] ?></h2>
         <h3>Ingrediënten</h3>
-        <p><?php echo $recept["ingredienten"] ?></p>
+        <p><?php echo $recept["aantal_ingredienten"] ?></p>
         <h3>beschrijving</h3>
         <p><?php echo $recept["beschrijving"] ?></p>
         <h3>bereidindstijd</h3>
-        <p><?php echo $recept["bereidingstijd"] ?></p>
+        <p><?php echo $recept["duur"] ?></p>
         <h3>aantal personen</h3>
         <p><?php echo $recept["aantal_personen"] ?></p>
         <h3>smaak</h3>
         <p><?php echo $recept["smaak"] ?></p>
-
+        <h3>moeilijkheidsgraat</h3>
+        <p><?php echo $recept["moeilijkheidsgraat"] ?></p>
+        <h3>menugang</h3>
+        <p><?php echo $recept["menugang"] ?></p>
     </div>
 
     <?php include 'footer.php'; ?>

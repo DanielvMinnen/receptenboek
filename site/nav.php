@@ -7,6 +7,6 @@
             <li><a href="http://localhost/contact.php">Contact</a></li>
 
         </ul>
-        <h1> Japanse Keuken</h1>
     </nav>
+    <h1 class="h1Header"> Japanse Keuken</h1>
 </header>
