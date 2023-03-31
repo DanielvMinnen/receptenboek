@@ -26,11 +26,11 @@ $recepten = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
 <body>
     <?Php include 'nav.php'; ?>
-
-    <div class="div2">
-        <h1 class="h11">welkom</h1>
-        <h1 class="h11">いらっしゃいませ</h1>
-    </div>
+        <div class="div2">
+            <h1 class="h11">welkom</h1>
+            <h1 class="h11">いらっしゃいませ</h1>
+        </div>
+    
 
 
 

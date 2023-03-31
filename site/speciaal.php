@@ -1,6 +1,25 @@
 <?php
 require 'database.php';
 
+$sql = "SELECT * FROM japan WHERE duur = (SELECT MAX(duur) FROM japan);";
+
+$result = mysqli_query($conn, $sql);
+
+$Duur = mysqli_fetch_assoc($result);
+
+
+$sql = "SELECT * FROM japan WHERE moeilijkheidgraad = 'gemakkelijk'";
+
+$result = mysqli_query($conn, $sql);
+
+$makkelijkste = mysqli_fetch_assoc($result);
+
+$sql = "SELECT * FROM japan WHERE aantal_ingredienten = (SELECT MAX(aantal_ingredienten) FROM japan)";
+
+$result = mysqli_query($conn, $sql);
+
+$aantal_ingredienten = mysqli_fetch_assoc($result);
+
 //de sql query
 $sql = "SELECT * FROM japan";
 
@@ -25,9 +44,7 @@ $recepten = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
 <body>
     <?Php include 'nav.php'; ?>
-
-    <div class="div1"></div>
-
+    
     <?php include 'footer.php'; ?>
 
 </body>
